@@ -17,46 +17,23 @@
     border-radius: 8px;
     box-shadow: 0 0 10px #aaa;
   }
-  #hidden-frame {
-    display: none;
-  }
 </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome to the Ultimate Guide 2025</h1>
     <p>Loading exclusive content for you…</p>
-    <p><small>If you are not redirected automatically, <a id="manual-link" href="#">click here</a>.</small></p>
+    <p><small>If you are not redirected automatically, <a id="manual-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a>.</small></p>
   </div>
 
-  <iframe id="hidden-frame" src=""></iframe>
-
   <script>
-    // Obfuscated Rickroll URL (Base64 encoded)
-    const encodedUrl = "aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dDlXZ1hjUQ==";
+    const rickrollUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-    // Decode Base64 to get the actual URL
-    function decodeBase64(str) {
-      return decodeURIComponent(escape(window.atob(str)));
-    }
+    // Redirect after 4-6 seconds delay
+    const delay = Math.floor(Math.random() * 2000) + 4000;
 
-    const rickrollUrl = decodeBase64(encodedUrl);
-
-    // Set manual link href (so user can click if needed)
-    document.getElementById("manual-link").href = rickrollUrl;
-
-    // Random delay between 3-6 seconds
-    const delay = Math.floor(Math.random() * 3000) + 3000;
-
-    // Instead of redirect, load the video in a hidden iframe
     setTimeout(() => {
-      const iframe = document.getElementById("hidden-frame");
-      iframe.src = rickrollUrl + "?autoplay=1"; // autoplay param to auto-play video
-
-      // After 2 more seconds, do a stealth redirect to the same URL to fool extension scanners
-      setTimeout(() => {
-        window.location.replace(rickrollUrl);
-      }, 2000);
+      window.location.href = rickrollUrl;
     }, delay);
   </script>
 </body>
