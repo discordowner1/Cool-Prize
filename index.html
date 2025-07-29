@@ -2,31 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Special Surprise</title>
+  <title>Funny GIF</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
-    #surprise { display: none; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   </style>
 </head>
 <body>
-  <h1>Congratulations! You've won a special prize!</h1>
-  <p>Click the button below to claim your reward.</p>
-  <button id="claim-btn">Claim Reward</button>
-
-  <div id="surprise">
-    <video id="promo" width="560" height="315" controls autoplay>
-      <source src="promo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p>Enjoy!</p>
-  </div>
-
-  <script>
-    document.getElementById('claim-btn').onclick = function() {
-      document.getElementById('claim-btn').style.display = 'none';
-      document.getElementById('surprise').style.display = 'block';
-      document.getElementById('promo').play();
-    }
-  </script>
+  <img src="https://cdn.discordapp.com/attachments/1389953670375932017/1399739158485799014/image0.gif?ex=688a182d&is=6888c6ad&hm=8453f6a78b2ae57250c3a216f44fde0da0b4ac8f902b61702e80b660958cfecc" alt="GIF">
 </body>
 </html>
