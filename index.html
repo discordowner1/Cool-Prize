@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ultimate Guide 2025</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background: #f0f0f0;
-  }
-  .container {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #aaa;
-    max-width: 500px;
-    margin: 100px auto;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Special Surprise</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    #surprise { display: none; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to the Ultimate Guide 2025</h1>
-    <p>Loading exclusive content for you…</p>
-    <p><small>If you are not redirected automatically, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a>.</small></p>
+  <h1>Congratulations! You've won a special prize!</h1>
+  <p>Click the button below to claim your reward.</p>
+  <button id="claim-btn">Claim Reward</button>
+
+  <div id="surprise">
+    <video id="promo" width="560" height="315" controls autoplay>
+      <source src="promo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Enjoy!</p>
   </div>
 
   <script>
-    const rickrollUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-
-    // Redirect after 4-6 seconds delay
-    const delay = Math.floor(Math.random() * 2000) + 4000;
-
-    setTimeout(() => {
-      window.location.href = rickrollUrl;
-    }, delay);
+    document.getElementById('claim-btn').onclick = function() {
+      document.getElementById('claim-btn').style.display = 'none';
+      document.getElementById('surprise').style.display = 'block';
+      document.getElementById('promo').play();
+    }
   </script>
 </body>
 </html>
